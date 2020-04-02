@@ -10,3 +10,5 @@
 (package! flycheck)
 (package! prettier-js)
 (package! dockerfile-mode)
+(package! geiser)
+(package! racket-mode)

@@ -7,6 +7,9 @@
        :n "M-k" #'org-metaup))
 (setq display-line-numbers-type 'relative)
 
+;;Load theme
+(load-theme 'doom-gruvbox t)
+
 ;; React Development Environment
 
 (defun setup-tide-mode ()
