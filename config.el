@@ -95,3 +95,5 @@
 (after! neotree
   (advice-remove #'neo-util--set-window-width 'ignore)
   (setq neo-window-width 25))
+
+(evil-set-initial-state 'term-mode 'emacs)
