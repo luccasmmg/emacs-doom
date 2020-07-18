@@ -12,5 +12,4 @@
 (package! dockerfile-mode)
 (package! sml-mode)
 (package! exec-path-from-shell)
-(package! pdf-tools)
 (package! org-noter)

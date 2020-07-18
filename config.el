@@ -7,6 +7,12 @@
        :n "M-k" #'org-metaup))
 (setq display-line-numbers-type 'relative)
 
+;;Theme
+(setq doom-theme 'doom-challenger-deep)
+
+;;Racket-mode
+(add-to-list 'auto-mode-alist '("\\.rkt\\'" . racket-mode))
+
 ;; React Development Environment
 
 (defun setup-tide-mode ()
@@ -14,7 +20,7 @@
   (interactive)
   (tide-setup)
   (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (setq flycheck-check-syntax-automatically '(mode-enabled save))
   (eldoc-mode +1)
   (tide-hl-identifier-mode +1)
   (company-mode +1))
@@ -34,6 +40,12 @@
   "--jsx-bracket-same-line" "true"
   "--print-width" "100"))
 
+;We-mode
+(defun my-web-mode-hook ()
+  "Hooks for Web mode."
+  (setq web-mode-markup-indent-offset 2)
+)
+(add-hook 'web-mode-hook  'my-web-mode-hook)
 ;Evil-multiedit and evil-mc
 
 (def-package! evil-multiedit
@@ -97,3 +109,7 @@
   (setq neo-window-width 25))
 
 (evil-set-initial-state 'term-mode 'emacs)
+
+;Rust mode
+(add-hook 'rust-mode-hook #'racer-mode)
+(add-hook 'racer-mode-hook #'eldoc-mode)
