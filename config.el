@@ -1,4 +1,8 @@
 ;;; .doom.d/config.el -*- lexical-binding: t; -*-
+;;;
+
+;;Emacs pdf tools
+(pdf-loader-install)
 
 ;; Place your private configuration here
 (after! org
@@ -6,6 +10,7 @@
        :n "M-j" #'org-metadown
        :n "M-k" #'org-metaup))
 (setq display-line-numbers-type 'relative)
+(setq org-agenda-files (directory-files-recursively "~/org/" "\\.org$"))
 
 ;;Theme
 (setq doom-theme 'doom-challenger-deep)
@@ -111,5 +116,14 @@
 (evil-set-initial-state 'term-mode 'emacs)
 
 ;Rust mode
-(add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
+(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
+(setq rust-format-on-save t)
+
+;Peep Dired
+(evil-define-key 'normal peep-dired-mode-map (kbd "<SPC>") 'peep-dired-scroll-page-down
+                                             (kbd "C-<SPC>") 'peep-dired-scroll-page-up
+                                             (kbd "<backspace>") 'peep-dired-scroll-page-up
+                                             (kbd "j") 'peep-dired-next-file
+                                             (kbd "k") 'peep-dired-prev-file)
+(add-hook 'peep-dired-hook 'evil-normalize-keymaps)

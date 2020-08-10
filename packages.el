@@ -12,4 +12,6 @@
 (package! dockerfile-mode)
 (package! sml-mode)
 (package! exec-path-from-shell)
-(package! org-noter)
+(package! flycheck-rust)
+(package! peep-dired)
+(package! org-fstree)
