@@ -15,3 +15,4 @@
 (package! flycheck-rust)
 (package! peep-dired)
 (package! org-fstree)
+(package! vterm)
