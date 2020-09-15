@@ -30,17 +30,17 @@
 (setq company-tooltip-align-annotations t)
 
 (add-hook 'js-mode-hook 'setup-tide-mode)
-(require 'prettier-js)
-(add-hook 'js-mode-hook 'prettier-js-mode)
+(add-hook 'js2-mode-hook 'prettier-js-mode)
+(add-hook 'web-mode-hook 'prettier-js-mode)
 
-(setq prettier-js-args '(
-  "--trailing-comma" "none"
-  "--bracket-spacing" "true"
-  "--single-quote" "true"
-  "--no-semi" "true"
-  "--jsx-single-quote" "true"
-  "--jsx-bracket-same-line" "true"
-  "--print-width" "100"))
+;; (setq prettier-js-args '(
+;;   "--trailing-comma" "none"
+;;   "--bracket-spacing" "true"
+;;   "--single-quote" "true"
+;;   "--no-semi" "true"
+;;   "--jsx-single-quote" "true"
+;;   "--jsx-bracket-same-line" "true"
+;;   "--print-width" "100"))
 
 ;We-mode
 (defun my-web-mode-hook ()
