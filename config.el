@@ -52,10 +52,6 @@
 ;Twittering mode
 (setq twittering-icon-mode t)
 
-;Emacs exec-path-from-shell
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
-
 ;Neotree width
 (after! neotree
   (advice-remove #'neo-util--set-window-width 'ignore)

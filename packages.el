@@ -15,4 +15,7 @@
 (package! flycheck-rust)
 (package! peep-dired)
 (package! org-fstree)
+(package! anaconda-mode
+  :recipe (:host github :repo "dakra/anaconda-mode")
+  :pin "810163d5a65e62d58f363e2edaa3be70e6d82e25")
 (package! vterm)
