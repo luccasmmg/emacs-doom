@@ -75,6 +75,10 @@
 
 ;Projectile
 (setq projectile-project-search-path '("~/Projetos/"))
+(setq projectile-enable-caching t)
+(setq projectile-indexing-method 'native)
+(setq projectile-globally-ignored-directories '("node_modules"))
+
 
 ;Haskell
 (setq lsp-haskell-process-path-hie "ghcide")
