@@ -59,12 +59,6 @@
 
 (evil-set-initial-state 'term-mode 'emacs)
 
-;Rust mode
-(add-hook 'racer-mode-hook #'eldoc-mode)
-(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
-(add-hook 'rust-mode-hook (lambda () (setq tab-width 2)))
-(setq rust-format-on-save t)
-
 ;Peep Dired
 (evil-define-key 'normal peep-dired-mode-map (kbd "<SPC>") 'peep-dired-scroll-page-down
                                              (kbd "C-<SPC>") 'peep-dired-scroll-page-up
