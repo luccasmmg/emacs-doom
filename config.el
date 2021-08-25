@@ -10,7 +10,7 @@
 (setq org-agenda-files (directory-files-recursively "~/org/" "\\.org$"))
 
 ;;Theme
-(setq doom-theme 'doom-challenger-deep)
+(setq doom-theme 'doom-dracula)
 
 ;;Racket-mode
 (add-to-list 'auto-mode-alist '("\\.rkt\\'" . racket-mode))

@@ -10,6 +10,7 @@
 (package! flycheck)
 (package! prettier-js)
 (package! dockerfile-mode)
+(package! docker-compose-mode)
 (package! sml-mode)
 (package! exec-path-from-shell)
 (package! flycheck-rust)
