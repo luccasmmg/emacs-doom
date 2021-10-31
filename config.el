@@ -9,6 +9,9 @@
 (setq display-line-numbers-type 'relative)
 (setq org-agenda-files (directory-files-recursively "~/org/" "\\.org$"))
 
+;;Haskell LSP Path
+(add-to-list 'exec-path "/home/urutu-branco/.ghcup/bin")
+
 ;;Theme
 (setq doom-theme 'doom-dracula)
 
@@ -84,3 +87,7 @@
        (setq words-include-escape t)    ; \ loses word break status
        (setq indent-tabs-mode nil))     ; never ever indent with tabs
 (add-hook 'sml-mode-hook 'my-sml-mode-hook)
+
+;;; Fonts
+(setq doom-font (font-spec :family "monospace" :size 11 :weight 'semi-light))
+
