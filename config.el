@@ -13,47 +13,44 @@
 (add-to-list 'exec-path "/home/urutu-branco/.ghcup/bin")
 
 ;;Theme
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-challenger-deep)
 
 ;;Racket-mode
 (add-to-list 'auto-mode-alist '("\\.rkt\\'" . racket-mode))
 
 ;; React Development Environment
 
-(defun setup-tide-mode ()
-  "Setup Function for tide. "
-  (interactive)
-  (tide-setup)
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(mode-enabled save))
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  (company-mode +1))
+;; (defun setup-tide-mode ()
+;;   "Setup Function for tide. "
+;;   (interactive)
+;;   (tide-setup)
+;;   (flycheck-mode +1)
+;;   (setq flycheck-check-syntax-automatically '(mode-enabled save))
+;;   (eldoc-mode +1)
+;;   (tide-hl-identifier-mode +1)
+;;   (company-mode +1))
 
-(setq company-tooltip-align-annotations t)
+;; (setq company-tooltip-align-annotations t)
 
-(add-hook 'js-mode-hook 'setup-tide-mode)
-(add-hook 'js2-mode-hook 'prettier-js-mode)
-(add-hook 'web-mode-hook 'prettier-js-mode)
+;; (add-hook 'js-mode-hook 'setup-tide-mode)
+;; (add-hook 'js2-mode-hook 'prettier-js-mode)
+;; (add-hook 'web-mode-hook 'prettier-js-mode)
 
-;; (setq prettier-js-args '(
-;;   "--trailing-comma" "none"
-;;   "--bracket-spacing" "true"
-;;   "--single-quote" "true"
-;;   "--no-semi" "true"
-;;   "--jsx-single-quote" "true"
-;;   "--jsx-bracket-same-line" "true"
-;;   "--print-width" "100"))
+;; ;; (setq prettier-js-args '(
+;; ;;   "--trailing-comma" "none"
+;; ;;   "--bracket-spacing" "true"
+;; ;;   "--single-quote" "true"
+;; ;;   "--no-semi" "true"
+;; ;;   "--jsx-single-quote" "true"
+;; ;;   "--jsx-bracket-same-line" "true"
+;; ;;   "--print-width" "100"))
 
-;We-mode
-(defun my-web-mode-hook ()
-  "Hooks for Web mode."
-  (setq web-mode-markup-indent-offset 2)
-)
-(add-hook 'web-mode-hook  'my-web-mode-hook)
-
-;Twittering mode
-(setq twittering-icon-mode t)
+;; ;We-mode
+;; (defun my-web-mode-hook ()
+;;   "Hooks for Web mode."
+;;   (setq web-mode-markup-indent-offset 2)
+;; )
+;; (add-hook 'web-mode-hook  'my-web-mode-hook)
 
 ;Neotree width
 (after! neotree
