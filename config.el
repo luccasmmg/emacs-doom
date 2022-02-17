@@ -31,7 +31,6 @@
 ;;   (company-mode +1))
 
 ;; (setq company-tooltip-align-annotations t)
-
 ;; (add-hook 'js-mode-hook 'setup-tide-mode)
 ;; (add-hook 'js2-mode-hook 'prettier-js-mode)
 ;; (add-hook 'web-mode-hook 'prettier-js-mode)
